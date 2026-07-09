@@ -1,12 +1,6 @@
 import streamlit as st
-import pandas as pd
+import sklearn
 import joblib
 
-model = joblib.load("lung_cancer_model.pkl")
-
-st.title("Lung Cancer Prediction App")
-
-age = st.number_input("Age", 1, 120, 50)
-
-if st.button("Test"):
-    st.success("Model Loaded Successfully")
+st.write("sklearn:", sklearn.__version__)
+st.write("joblib loaded")
